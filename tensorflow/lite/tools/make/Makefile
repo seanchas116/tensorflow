@@ -134,6 +134,8 @@ $(wildcard tensorflow/lite/*/*/*test.cc) \
 $(wildcard tensorflow/lite/*/*/*/*test.cc) \
 $(wildcard tensorflow/lite/kernels/*test_main.cc) \
 $(wildcard tensorflow/lite/kernels/*test_util.cc) \
+$(wildcard tensorflow/lite/delegates/gpu/metal/kernels/*test.mm) \
+tensorflow/lite/delegates/gpu/metal/kernels/test_util.mm \
 $(MINIMAL_SRCS)
 
 BUILD_WITH_MMAP ?= true
