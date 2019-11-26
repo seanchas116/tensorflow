@@ -160,6 +160,7 @@ ifeq ($(TARGET),windows)
 endif
 ifeq ($(TARGET),ios)
 	BUILD_WITH_NNAPI=false
+	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/common/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/*.mm)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/kernels/*.cc)
