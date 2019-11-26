@@ -17,7 +17,7 @@ ifeq ($(TARGET), ios)
 		IPHONEOS_SYSROOT := $(shell xcrun --sdk iphoneos --show-sdk-path)
 	endif
 	IOS_SDK_VERSION := $(shell xcrun --sdk iphoneos --show-sdk-version)
-	MIN_SDK_VERSION := 9.0
+	MIN_SDK_VERSION := 11.0
 	# Override TARGET_ARCH with armv7, armv7s, arm64, i386, or x86_64.
 	TARGET_ARCH := x86_64
 	CXXFLAGS += -miphoneos-version-min=$(MIN_SDK_VERSION) \
