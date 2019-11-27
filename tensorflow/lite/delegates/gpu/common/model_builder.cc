@@ -2114,7 +2114,7 @@ class UnsupportedOperationParser : public TFLiteOperationParser {
 std::unique_ptr<TFLiteOperationParser> NewOperationParser(
     const TfLiteRegistration* registration) {
   const auto builtin_code = registration->builtin_code;
-  const absl::string_view custom_name = registration->custom_name;
+  const absl::string_view custom_name = registration->custom_name ? registration->custom_name : "";
   switch (builtin_code) {
     case kTfLiteBuiltinAbs:
       return make_unique<ElementwiseOperationParser>(OperationType::ABS);
