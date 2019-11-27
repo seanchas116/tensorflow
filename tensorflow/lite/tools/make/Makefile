@@ -132,6 +132,7 @@ $(wildcard tensorflow/lite/*test.cc) \
 $(wildcard tensorflow/lite/*/*test.cc) \
 $(wildcard tensorflow/lite/*/*/*test.cc) \
 $(wildcard tensorflow/lite/*/*/*/*test.cc) \
+$(wildcard tensorflow/lite/*/*/*/*/*test.cc) \
 $(wildcard tensorflow/lite/kernels/*test_main.cc) \
 $(wildcard tensorflow/lite/kernels/*test_util.cc) \
 $(wildcard tensorflow/lite/delegates/gpu/metal/kernels/*test.mm) \
@@ -175,6 +176,7 @@ ifeq ($(TARGET),ios)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/common/*.cc)
+	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/common/transformations/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/*.mm)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/kernels/*.cc)
