@@ -137,9 +137,12 @@ $(wildcard tensorflow/lite/kernels/*test_util.cc) \
 $(wildcard tensorflow/lite/delegates/gpu/metal/kernels/*test.mm) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*test.cc) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*test.cc) \
+$(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*test.cc) \
+$(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*/*test.cc) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*test_common.cc) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*benchmark.cc) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*benchmark.cc) \
+$(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*/*benchmark.cc) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*testing.cc) \
 $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*nonprod.cc) \
 tensorflow/lite/delegates/gpu/metal/kernels/test_util.mm \
@@ -169,6 +172,8 @@ ifeq ($(TARGET),ios)
 	BUILD_WITH_NNAPI=false
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*.cc)
+	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*.cc)
+	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/tools/make/downloads/absl/absl/*/*/*/*/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/common/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/*.cc)
 	CORE_CC_ALL_SRCS += $(wildcard tensorflow/lite/delegates/gpu/metal/*.mm)
