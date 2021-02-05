@@ -161,7 +161,7 @@ if(CMAKE_SYSTEM_NAME MATCHES "Windows")
   # lite/kernels/conv.cc has more than 64k sections so enable /bigobj to
   # support compilation with MSVC2015.
   if(MSVC)
-    list(APPEND TFLITE_TARGET_PRIVATE_OPTIONS "/bigobj")
+    list(APPEND TFLITE_TARGET_PRIVATE_OPTIONS "/bigobj" "/source-charset:utf-8")
   elseif(CMAKE_COMPILER_IS_GNUCXX)
     list(APPEND TFLITE_TARGET_PRIVATE_OPTIONS "-Wa,-mbig-obj")
   endif()

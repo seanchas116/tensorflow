@@ -35,4 +35,5 @@ list(FILTER RUY_SOURCES EXCLUDE REGEX ".*/gtest_wrapper\\.h$")
 
 add_library(ruy ${RUY_SOURCES})
 target_include_directories(ruy PUBLIC "${RUY_SOURCE_DIR}")
+target_compile_options(ruy PRIVATE "/source-charset:utf-8")
 
