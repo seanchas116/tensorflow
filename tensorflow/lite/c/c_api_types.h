@@ -27,7 +27,7 @@ extern "C" {
 
 // Define TFL_CAPI_EXPORT macro to export a function properly with a shared
 // library.
-#ifdef SWIG
+#if !defined(TFLITE_BUILD_SHARED_LIBS) || defined(SWIG)
 #define TFL_CAPI_EXPORT
 #else
 #if defined(_WIN32)
